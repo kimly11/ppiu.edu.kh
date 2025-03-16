@@ -96,7 +96,7 @@
 
             <!-- Library -->
             <li class="nav-item dropdown">
-              <a href="<?php echo APPURL;?>/library.php" class="nav-link" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Library</a>
+              <a href="<?php echo APPURL;?>/services.php" class="nav-link" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Library</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a href="#" class="dropdown-item">PPIU Reading Club</a></li>
                 <li><a href="#" class="dropdown-item">LIBRARY MATERIALS</a></li>
@@ -105,7 +105,7 @@
             </li>
 
             <!-- About PPIU -->
-            <li class="nav-item"><a href="<?php echo APPURL;?>/about-ppiu.php" class="nav-link">About PPIU</a></li>
+            <li class="nav-item"><a href="<?php echo APPURL;?>/about.php" class="nav-link">About PPIU</a></li>
 
             <!-- Contact -->
             <li class="nav-item"><a href="<?php echo APPURL;?>/contact.php" class="nav-link">Contact</a></li>
