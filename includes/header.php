@@ -71,7 +71,7 @@
 
                 <!-- FACULTIES Dropdown -->
                 <li class="dropdown-submenu">
-                  <a href="#" class="dropdown-item dropdown-toggle">FACULTIES</a>
+                  <a href="faculties.php" class="dropdown-item dropdown-toggle">FACULTIES</a>
                   <ul class="dropdown-menu">
                     <li><a href="#" class="dropdown-item">FACULTY OF SCIENCE AND TECHNOLOGY</a></li>
                     <li><a href="#" class="dropdown-item">FACULTY OF BUSINESS AND TOURISM</a></li>
