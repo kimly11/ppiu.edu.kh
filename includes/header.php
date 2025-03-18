@@ -46,13 +46,7 @@
             
             <!-- Admission Dropdown -->
             <li class="nav-item dropdown">
-              <a class="nav-link" href="<?php echo APPURL;?>/admission.php" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Admission</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a href="#" class="dropdown-item">ASSOCIATE</a></li>
-                <li><a href="#" class="dropdown-item">MASTER</a></li>
-                <li><a href="#" class="dropdown-item">BACHELOR</a></li>
-                <li><a href="#" class="dropdown-item">DOCTORAL</a></li>
-              </ul>
+              <a class="nav-link" href="<?php echo APPURL;?>/About.php" id="navbarDropdownMenuLink" role="button" aria-expanded="false">About</a>
             </li>
 
             <!-- Academic Dropdown -->
@@ -104,8 +98,17 @@
               </ul>
             </li>
 
-            <!-- About PPIU -->
-            <li class="nav-item"><a href="<?php echo APPURL;?>/about.php" class="nav-link">About PPIU</a></li>
+            <!-- Admission Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="<?php echo APPURL;?>/admission.php" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Admission</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a href="#" class="dropdown-item">ASSOCIATE</a></li>
+                <li><a href="#" class="dropdown-item">MASTER</a></li>
+                <li><a href="#" class="dropdown-item">BACHELOR</a></li>
+                <li><a href="#" class="dropdown-item">DOCTORAL</a></li>
+              </ul>
+            </li>
+
 
             <!-- Contact -->
             <li class="nav-item"><a href="<?php echo APPURL;?>/contact.php" class="nav-link">Contact</a></li>
