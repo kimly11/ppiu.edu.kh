@@ -114,5 +114,6 @@
 
 <!-- Google Maps API -->
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&sensor=false"></script>
+<iframe allowfullscreen="" frameborder="0" height="350" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7817.6654767463615!2d104.9112548!3d11.5638456!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7619b468836cd886!2sPhnom+Penh+International+University+(PPIU)!5e0!3m2!1sen!2skh!4v1479452933759" style="border:0" width="100%"></iframe>
 <script src="<?php echo APPURL; ?>/js/google-map.js"></script>
 <script src="<?php echo APPURL; ?>/js/main.js"></script>
