@@ -95,7 +95,6 @@
         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
     </svg>
 </div>
-
 <!-- Scripts -->
 <script src="<?php echo APPURL; ?>/js/jquery.min.js"></script>
 <script src="<?php echo APPURL; ?>/js/jquery-migrate-3.0.1.min.js"></script>
@@ -113,6 +112,6 @@
 <script src="<?php echo APPURL; ?>/js/scrollax.min.js"></script>
 
 <!-- Google Maps API -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&sensor=false"></script>
+<!-- <script src="https://maps.app.goo.gl/6HWcr8vWKAtdcsXh9"></script> -->
 <script src="<?php echo APPURL; ?>/js/google-map.js"></script>
 <script src="<?php echo APPURL; ?>/js/main.js"></script>
