@@ -46,7 +46,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgb(254, 253, 253); }
 
 @-ms-viewport {
   width: device-width; }
@@ -115,7 +115,7 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0; }
-  /*  */
+
 .dropdown-submenu {
     position: relative;
 }
@@ -377,8 +377,8 @@ hr {
 
 small,
 .small {
-  font-size: 80%;
-  font-weight: 400; }
+  font-size: 100%;
+  font-weight: 500; }
 
 mark,
 .mark {
@@ -474,6 +474,7 @@ pre {
   overflow-y: scroll; }
 
 .container {
+  align-items: center;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -7292,8 +7293,9 @@ body {
   font-size: 15px;
   line-height: 1.8;
   font-weight: 300;
-  color: gray;
-  background: url(../images/bg_4.jpg) no-repeat fixed;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: var(--red);
+  /* background: url(../images/bg_4.jpg) no-repeat fixed; */
   background-size: cover; }
   body.menu-show {
     overflow: hidden;
@@ -7464,7 +7466,7 @@ h1, h2, h3, h4, h5,
     left: 0;
     top: 0;
     margin-top: -130px;
-    background: #151111 !important;
+    background: #c79f47 !important;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     border: none; }
@@ -7833,7 +7835,7 @@ h1, h2, h3, h4, h5,
         height: 300px; } }
   @media (min-width: 768px) {
     .ftco-about .one-half .overlap {
-      margin-left: -150px;
+      margin-left: -110px;
       padding: 40px;
       background: rgba(0, 0, 0, 0.5); } }
 
@@ -8523,12 +8525,13 @@ textarea.form-control {
       padding: 6em 0; } }
 
 .ftco-bg-dark {
-  background: #030202; }
+  background: #ffe8a1; }
 
 .ftco-footer {
   font-size: 16px;
   padding: 7em 0;
-  background: #120f0f; }
+  background: #ff2c07; 
+}
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
     letter-spacing: .1em; }
@@ -8638,7 +8641,7 @@ textarea.form-control {
     z-index: 1; }
   .heading-section h2 {
     z-index: -1;
-    font-size: 40px;
+    font-size: 18px;
     font-weight: 700;
     position: relative;
     text-transform: uppercase; }

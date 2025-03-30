@@ -3,6 +3,8 @@
     define("APPURL", "http://localhost/ppiu.edu.kh");
     define("IMAGEPRODUCTS", "http://localhost/ppiu.edu.kh/admin-panel/products-admins/images");
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,6 +62,9 @@
                     <li><a href="#" class="dropdown-item">PROFESSIONAL/SHORT COURSE</a></li>
                     <li><a href="#" class="dropdown-item">ASSOCIATE</a></li>
                     <li><a href="#" class="dropdown-item">MASTER'S DEGREE</a></li>
+                    <li><a href="bachelor.php" class="dropdown-item">BACHELOR</a></li>
+                    <li><a href="doctoral.php" class="dropdown-item">DOCTORAL</a></li>
+
                   </ul>
                 </li>
 
@@ -67,7 +72,7 @@
                 <li class="dropdown-submenu">
                   <a href="faculties.php" class="dropdown-item dropdown-toggle">FACULTIES</a>
                   <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">FACULTY OF SCIENCE AND TECHNOLOGY</a></li>
+                    <li><a href="technology.php" class="dropdown-item">FACULTY OF SCIENCE AND TECHNOLOGY</a></li>
                     <li><a href="#" class="dropdown-item">FACULTY OF BUSINESS AND TOURISM</a></li>
                   </ul>
                 </li>
