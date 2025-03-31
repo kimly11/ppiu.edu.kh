@@ -70,7 +70,7 @@
 
     <section class="home-slider owl-carousel">
 
-      <div class="slider-item" style="background-image: url(<?php echo APPURL; ?>/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+      <div class="slider-item" style="background-image: url(<?php echo APPURL; ?>/images/bg2.jpg);" data-stellar-background-ratio="0.5">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center">
@@ -91,7 +91,7 @@
     			<div class="col-lg-6 mb-5 ftco-animate">
     				<a href="h-50 images/menu-2.jpg" class="image-popup"><img src="<?php echo IMAGEPRODUCTS; ?>/<?php echo $singelProduct->image; ?>" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
-    			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
+    			<!-- <div class="col-lg-6 product-details pl-md-5 ftco-animate">
     				<h3><?php echo $singelProduct->name; ?></h3>
     				<p class="price"><span>$<?php echo $singelProduct->price; ?></span></p>
     				<p>
@@ -102,7 +102,7 @@
 
 					<div class="row mt-4">
 							<div class="col-md-6">
-								<!-- <div class="form-group d-flex">
+								 <div class="form-group d-flex">
 									<div class="select-wrap">
 									<div class="icon"><span class="ion-ios-arrow-down"></span></div>
 									<select name="" id="" class="form-control">
@@ -112,7 +112,7 @@
 										<option value="">Extra Large</option>
 									</select>
 								</div> -->
-		            		</div>
+		            		<!-- </div>
 							</div>
 							<div class="w-100"></div>
 							<div class="input-group col-md-6 d-flex mb-3">
@@ -129,7 +129,7 @@
 						</button>
 						</span>
 					</div>
-				</div>
+				</div> --> 
 				<input name="name" value="<?php echo $singelProduct->name; ?>" type="hidden">
 				<input name="image" value="<?php echo $singelProduct->image; ?>" type="hidden">
 				<input name="price" value="<?php echo $singelProduct->price; ?>" type="hidden">
@@ -142,7 +142,7 @@
 						<button  style="display: inline-block; position: relative; z-index: 1; padding: 2em; margin: -2em; margin-top: -335px; margin-left: 632px; height: 65px;" name="submit" type="submit" class="btn btn-primary py-3 px-5">Add to Cart</button>
 					<?php endif; ?>	
 				<?php else : ?>	
-					<p style="margin-top: -335px; margin-left: 632px; height: 65px;">login to add product to cart</p>
+					<!-- <p style="margin-top: -335px; margin-left: 632px; height: 65px;">login to add product to cart</p> -->
 				<?php endif; ?>	
 			</form>
     			</div>

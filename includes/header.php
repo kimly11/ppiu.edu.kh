@@ -49,6 +49,10 @@
             <!-- Admission Dropdown -->
             <li class="nav-item dropdown">
               <a class="nav-link" href="<?php echo APPURL;?>/About.php" id="navbarDropdownMenuLink" role="button" aria-expanded="false">About</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a href="academicstaff.php" class="dropdown-item">academic staff</a></li>
+                <li><a href="supportstaff.php" class="dropdown-item">support staff</a></li>
+              </ul>
             </li>
 
             <!-- Academic Dropdown -->
@@ -59,7 +63,7 @@
                 <li class="dropdown-submenu">
                   <a href="#" class="dropdown-item dropdown-toggle">DEGREE</a>
                   <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">PROFESSIONAL/SHORT COURSE</a></li>
+                    <li><a href="test.php" class="dropdown-item">PROFESSIONAL/SHORT COURSE</a></li>
                     <li><a href="#" class="dropdown-item">ASSOCIATE</a></li>
                     <li><a href="#" class="dropdown-item">MASTER'S DEGREE</a></li>
                     <li><a href="bachelor.php" class="dropdown-item">BACHELOR</a></li>
@@ -88,8 +92,8 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a href="#" class="dropdown-item">EVENTS</a></li>
                 <li><a href="#" class="dropdown-item">SCHOLARSHIPS</a></li>
-                <li><a href="#" class="dropdown-item">Announcements</a></li>
-                <li><a href="#" class="dropdown-item">Student Loan</a></li>
+                <li><a href="announcement.php" class="dropdown-item">Announcements</a></li>
+                <li><a href="loan.php" class="dropdown-item">Student Loan</a></li>
               </ul>
             </li>
 

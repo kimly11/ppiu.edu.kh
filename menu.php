@@ -25,7 +25,7 @@
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
             	<h1 class="mb-3 mt-5 bread">Our Menu</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Menu</span></p>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>News</span></p>
             </div>
 
           </div>
@@ -33,7 +33,7 @@
       </div>
     </section>
 
-    <section class="ftco-intro">
+    <!-- <section class="ftco-intro">
     	<div class="container-wrap">
     		<div class="wrap d-md-flex align-items-xl-end">
 	    		<div class="info">
@@ -106,9 +106,9 @@
 	    		</div>
     		</div>
     	</div>
-    </section>
+    </section> -->
 
-    <section class="ftco-section">
+    <!-- <section class="ftco-section">
     	<div class="container">
         <div class="row">
         
@@ -152,7 +152,7 @@
         	</div>
         </div>
     	</div>
-    </section>
+    </section> -->
 
     <section class="ftco-menu mb-5 pb-5">
     	<div class="container">
@@ -169,9 +169,9 @@
 		          <div class="col-md-12 nav-link-wrap mb-5">
 		            <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
-		              <a class="nav-link active" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Drinks</a>
+		              <a class="nav-link active" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">News</a>
 
-		              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Desserts</a>
+		              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">News</a>
 		            </div>
 		          </div>
 		          <div class="col-md-12 d-flex align-items-center">
@@ -189,7 +189,7 @@
 		              				<div class="text">
 		              					<h3><a href="products/product-single.php?id=<?php echo $drink->id; ?>"><?php echo $drink->name; ?></a></h3>
 		              					<p><?php echo $drink->description; ?></p>
-		              					<p class="price"><span>$<?php echo $drink->price; ?></span></p>
+		              					<p class="price"><span><?php echo $drink->price; ?></span></p>
 		              					<p><a href="products/product-single.php?id=<?php echo $drink->id; ?>" class="btn btn-primary btn-outline-primary">show</a></p>
 		              				</div>
 		              			</div>
@@ -208,7 +208,7 @@
 										<div class="text">
 											<h3><a href="products/product-single.php?id=<?php echo $dessert->id; ?>"><?php echo $dessert->name; ?></a></h3>
 											<p><?php echo $dessert->description; ?></p>
-											<p class="price"><span>$<?php echo $dessert->price; ?></span></p>
+											<p class="price"><span><?php echo $dessert->price; ?></span></p>
 											<p><a href="products/product-single.php?id=<?php echo $dessert->id; ?>" class="btn btn-primary btn-outline-primary">show</a></p>
 										</div>
 									</div>

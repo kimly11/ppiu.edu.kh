@@ -8,9 +8,11 @@
                     <h2 class="ftco-heading-2">About Us</h2>
                     <p>The University was renamed as the "Phnom Penh International University - PPIU" In 2006, the Sub-Decree No. 111. Dated October 24, 2006 of the government and under the supervision of the Ministry of Education, Youth and Sports.</p>
                     <ul class="ftco-footer-social list-unstyled mt-5">
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a href="https://x.com/ppiuoffical"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="https://web.facebook.com/ppiu.edu.kh.ppiucam"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.instagram.com/officialppiu/"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.youtube.com/channel/UCtQK_K719j7z3urWlNyeQjA?"><span class="icon-youtube" alt="https://www.youtube.com/user/cellcardxg"></span></a></li>
+
                     </ul>
                 </div>
             </div>

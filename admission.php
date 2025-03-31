@@ -49,6 +49,10 @@
             <!-- Admission Dropdown -->
             <li class="nav-item dropdown">
               <a class="nav-link" href="<?php echo APPURL;?>/About.php" id="navbarDropdownMenuLink" role="button" aria-expanded="false">About</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a href="academicstaff.php" class="dropdown-item">academic staff</a></li>
+                <li><a href="supportstaff.php" class="dropdown-item">support staff</a></li>
+              </ul>
             </li>
 
             <!-- Academic Dropdown -->
@@ -143,9 +147,9 @@
 </div><div class="kingster-page-title-wrap  kingster-style-custom kingster-left-align" style="background-image: url(https://cam-ed.edu.kh/wp-content/uploads/2020/11/application.jpg) ;" ><div class="kingster-header-transparent-substitute" ></div><div class="kingster-page-title-overlay"  ></div><div class="kingster-page-title-bottom-gradient" ></div><div class="kingster-page-title-container kingster-container" ><div class="kingster-page-title-content kingster-item-pdlr" style="padding-top: 468px ;padding-bottom: 60px ;"  ><h1 class="kingster-page-title" style="font-size: 48px ;font-weight: 700 ;text-transform: none ;letter-spacing: 0px ;color: #ffffff ;"  >Admissions</h1></div></div></div>	<div class="kingster-page-wrapper" id="kingster-page-wrapper" ><div class="gdlr-core-page-builder-body"><div class="gdlr-core-pbf-wrapper " style="padding: 60px 0px 10px 0px;"  id="applynow" ><div class="gdlr-core-pbf-background-wrap"  ></div><div class="gdlr-core-pbf-wrapper-content gdlr-core-js "   ><div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container" ><div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first"  id="applications" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 0px 0px 20px 0px;"   ><div class="gdlr-core-pbf-background-wrap"  ></div><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 20px ;"  id="application"  ><div class="gdlr-core-title-item-title-wrap clearfix" ><h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #752534 ;"  >APPLICATION FOR NEW STUDENT</h3></div></div></div><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 40px ;"  ><div class="gdlr-core-text-box-item-content" style="text-transform: none ;"  ><table class=" alignleft" style="text-align: left;" border="0" width="100%" cellspacing="3" cellpadding="4">
 <thead>
 <tr>
-<th style="width=20%; background: #76323f; border-top-left-radius: 0.6em; padding: 10px; font-size: 20px;">Program</th>
-<th style="width=20%; background: #76323f; padding: 10px; font-size: 20px;">Deadline</th>
-<th style="width=20%; background: #76323f; border-top-right-radius: 0.6em; padding: 10px; font-size: 20px;">Application Form</th>
+<th style="width:20%; background: #76323f; border-top-left-radius: 0.6em; padding: 10px; font-size: 20px;">Program</th>
+<th style="width:20%; background: #76323f; padding: 10px; font-size: 20px;">Deadline</th>
+<th style="width:20%; background: #76323f; border-top-right-radius: 0.6em; padding: 10px; font-size: 20px;">Application Form</th>
 </tr>
 </thead>
 <tbody>
@@ -194,9 +198,9 @@
 </div></div></div></div></div></div></div></div></div><div class="gdlr-core-pbf-wrapper " style="padding: 20px 0px 5px 0px;"  id="enrollment" ><div class="gdlr-core-pbf-background-wrap"  ></div><div class="gdlr-core-pbf-wrapper-content gdlr-core-js "   ><div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container" ><div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first"  id="gdlr-core-column-66528" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 0px 0px 5px 0px;"   ><div class="gdlr-core-pbf-background-wrap"  ></div><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 15px ;"  ><div class="gdlr-core-title-item-title-wrap clearfix" ><h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #76323f ;"  >ENROLLMENT FOR EXISTING STUDENT</h3></div></div></div><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 40px ;"  ><div class="gdlr-core-text-box-item-content" style="text-transform: none ;"  ><table class=" alignleft" style="text-align: left;" border="0" width="100%" cellspacing="3" cellpadding="4">
 <thead>
 <tr>
-<th style="width=20%; background: #76323f; border-top-left-radius: 0.6em; padding: 10px; font-size: 20px;">Program</th>
-<th style="width=20%; background: #76323f; padding: 10px; font-size: 20px;">Deadline</th>
-<th style="width=20%; background: #76323f; border-top-right-radius: 0.6em; padding: 10px; font-size: 20px;">Enrollment Form</th>
+<th style="width:20%; background: #76323f; border-top-left-radius: 0.6em; padding: 10px; font-size: 20px;">Program</th>
+<th style="width:20%; background: #76323f; padding: 10px; font-size: 20px;">Deadline</th>
+<th style="width:20%; background: #76323f; border-top-right-radius: 0.6em; padding: 10px; font-size: 20px;">Enrollment Form</th>
 </tr>
 </thead>
 <tbody>
@@ -240,8 +244,8 @@
 </div></div></div></div></div></div></div></div></div><div class="gdlr-core-pbf-wrapper " style="padding: 20px 0px 5px 0px;" ><div class="gdlr-core-pbf-background-wrap"  ></div><div class="gdlr-core-pbf-wrapper-content gdlr-core-js "   ><div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container" ><div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first"  id="exam-register" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-background-wrap"  ></div><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 15px ;"  ><div class="gdlr-core-title-item-title-wrap clearfix" ><h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #76323f ;"  >EXAM REGISTRATION</h3></div></div></div><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 40px ;"  ><div class="gdlr-core-text-box-item-content" style="text-transform: none ;"  ><table class=" alignleft" style="text-align: left;" border="0" width="100%" cellspacing="3" cellpadding="4">
 <thead>
 <tr>
-<th style="width=20%; background: #76323f; border-top-left-radius: 0.6em; padding: 10px; font-size: 20px;">Paper/Course</th>
-<th style="width=20%; background: #76323f; border-top-right-radius: 0.6em; padding: 10px; font-size: 20px;">Form</th>
+<th style="width:20%; background:rgb(194, 172, 176); border-top-left-radius: 0.6em; padding: 10px; font-size: 20px;">Paper/Course</th>
+<th style="width:20%; background: #76323f; border-top-right-radius: 0.6em; padding: 10px; font-size: 20px;">Form</th>
 </tr>
 </thead>
 <tbody>

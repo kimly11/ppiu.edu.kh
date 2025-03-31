@@ -94,7 +94,7 @@
 	    				</div>
 	    			</div>
 	    		</div>
-	    		<div class="book p-4">
+	    		<!-- <div class="book p-4">
 	    			<h3>Book a Table</h3>
 	    			<form action="booking/book.php" method="POST" class="appointment-form">
 	    				<div class="d-md-flex">
@@ -135,7 +135,7 @@
 					<?php endif; ?>
 	    				</div>
 	    			</form>
-	    		</div>
+	    		</div> -->
     		</div>
     	</div>
     </section>
@@ -202,7 +202,7 @@
 	          	<span class="subheading">Discover</span>
 	            <h2 class="mb-4">Our Menu</h2>
 	            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-	            <p><a href="menu.php" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a></p>
+	            <p><a href="news.php" class="btn btn-primary btn-outline-primary px-4 py-3">View All News</a></p>
 	          </div>
     			</div>
     			<div class="col-md-6">
@@ -233,7 +233,7 @@
     	</div>
     </section>
 
-    <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg1.jpg);" data-stellar-background-ratio="0.5">
+    <!-- <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg1.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center">
@@ -279,7 +279,7 @@
 		      </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="ftco-section">
     	<div class="container">
@@ -347,7 +347,7 @@
 
     
 
-    <section class="ftco-section img" id="ftco-testimony" style="background-image: url(images/bg_1.jpg);"  data-stellar-background-ratio="0.5">
+    <section class="ftco-section img" id="ftco-testimony" style="background-image: url(images/bg_girl.jpg);"  data-stellar-background-ratio="0.5">
     	<div class="overlay"></div>
 	    <div class="container">
 	      <div class="row justify-content-center mb-5">
@@ -359,7 +359,7 @@
 	      </div>
 	    </div>
 	    <div class="container-wrap">
-	      <div class="row d-flex no-gutters">
+	      <div class="row d-flex no-gutters justify-content-center">
 			<?php foreach($allReviews as $review) : ?>
 	        <div class="col-md-3 align-self-sm-end ftco-animate">
 	          <div class="testimony">
