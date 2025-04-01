@@ -26,7 +26,7 @@
             	<span class="subheading">Welcome</span>
               <h1 class="mb-4">The Best Coffee Testing Experience</h1>
               <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+              <p><a href="news.php" class="btn btn-primary p-3 px-xl-4 py-xl-3">News</a> <a href="contact.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Contact</a></p>
             </div>
 
           </div>
@@ -155,7 +155,7 @@
     	</div>
     </section>
 
-    <section class="ftco-section ftco-services">
+    <!-- <section class="ftco-section ftco-services">
     	<div class="container">
     		<div class="row">
           <div class="col-md-4 ftco-animate">
@@ -192,7 +192,7 @@
           </div>
         </div>
     	</div>
-    </section>
+    </section> -->
 
     <section class="ftco-section">
     	<div class="container">
@@ -294,12 +294,12 @@
 			<?php foreach($allProducts as $prodcut) : ?>
 				<div class="col-md-3">
 					<div class="menu-entry">
-							<a target="_blank" href="products/product-single.php?id=<?php echo $prodcut->id; ?>" class="img" style="background-image: url(<?php echo IMAGEPRODUCTS; ?>/<?php echo $prodcut->image; ?>);"></a>
+							<a target="_blank" href="product-single.php?id=<?php echo $prodcut->id; ?>" class="img" style="background-image: url(<?php echo IMAGEPRODUCTS; ?>/<?php echo $prodcut->image; ?>);"></a>
 							<div class="text text-center pt-4">
 								<h3><a href="#"><?php echo $prodcut->name; ?></a></h3>
 								<p><?php echo $prodcut->description; ?></p>
 								<p class="price"><span>$<?php echo $prodcut->price; ?></span></p>
-								<p><a target="_blank" href="products/product-single.php?id=<?php echo $prodcut->id; ?>" class="btn btn-primary btn-outline-primary">Show</a></p>
+								<p><a target="_blank" href="product-single.php?id=<?php echo $prodcut->id; ?>" class="btn btn-primary btn-outline-primary">Show</a></p>
 							</div>
 						</div>
 
