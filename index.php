@@ -17,56 +17,56 @@
 ?>
 
     <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url(images/about3.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            	<span class="subheading">Welcome</span>
+              <!-- <h1 class="mb-4">The Best Coffee Testing Experience</h1> -->
+              <!-- <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <p><a href="news.php" class="btn btn-primary p-3 px-xl-4 py-xl-3">News</a> <a href="contact.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Contact</a></p> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+
       <div class="slider-item" style="background-image: url(images/bg1.jpg);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
-            <div class="col-md-8 col-sm-12 text-center ftco-animate">
-            	<span class="subheading">Welcome</span>
-              <h1 class="mb-4">The Best Coffee Testing Experience</h1>
-              <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="news.php" class="btn btn-primary p-3 px-xl-4 py-xl-3">News</a> <a href="contact.php" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Contact</a></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="slider-item" style="background-image: url(images/bg2.jpeg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            <!-- <div class="col-md-8 col-sm-12 text-center ftco-animate">
             	<span class="subheading">Welcome</span>
               <h1 class="mb-4">Amazing Taste &amp; Beautiful Place</h1>
               <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
               <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
-            </div>
+            </div> -->
 
           </div>
         </div>
       </div>
 
-      <div class="slider-item" style="background-image: url(images/bg3.jpg);">
+      <div class="slider-item" style="background-image: url(images/about5.jpg);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
-            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            <!-- <div class="col-md-8 col-sm-12 text-center ftco-animate">
             	<span class="subheading">Welcome</span>
               <h1 class="mb-4">Creamy Hot and Ready to Serve</h1>
               <p class="mb-4 mb-md-5">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
               <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
-            </div>
+            </div> -->
 
           </div>
         </div>
       </div>
     </section>
 
-    <section class="ftco-intro">
+    <!-- <section class="ftco-intro">
     	<div class="container-wrap">
     		<div class="wrap d-md-flex align-items-xl-end">
 	    		<div class="info">
@@ -74,26 +74,27 @@
 	    				<div class="col-md-4 d-flex ftco-animate">
 	    					<div class="icon"><span class="icon-phone"></span></div>
 	    					<div class="text">
-	    						<h3>000 (123) 456 7890</h3>
-	    						<p>A small river named Duden flows by their place and supplies.</p>
+	    						<h3>(855) 78 985 163</h3>
+	    						<p>info@ppiu.edu.kh</p>
 	    					</div>
 	    				</div>
 	    				<div class="col-md-4 d-flex ftco-animate">
 	    					<div class="icon"><span class="icon-my_location"></span></div>
 	    					<div class="text">
-	    						<h3>198 West 21th Street</h3>
-	    						<p>	203 Fake St. Mountain View, San Francisco, California, USA</p>
+	    						<h3>169 in Ppiu university,</h3>
+	    						<p>	 Czech Republic Blvd (169, Phnom Penh, Cambodia)</p>
 	    					</div>
 	    				</div>
 	    				<div class="col-md-4 d-flex ftco-animate">
 	    					<div class="icon"><span class="icon-clock-o"></span></div>
 	    					<div class="text">
 	    						<h3>Open Monday-Friday</h3>
-	    						<p>8:00am - 9:00pm</p>
+	    						<p>8:00am - 11:00pm</p>
+								<p>2:00pm - 5:00pm</p>
 	    					</div>
 	    				</div>
 	    			</div>
-	    		</div>
+	    		</div> -->
 	    		<!-- <div class="book p-4">
 	    			<h3>Book a Table</h3>
 	    			<form action="booking/book.php" method="POST" class="appointment-form">
@@ -136,21 +137,22 @@
 	    				</div>
 	    			</form>
 	    		</div> -->
-    		</div>
+    		 <!-- </div>
     	</div>
-    </section>
+    </section> -->
 
     <section class="ftco-about d-md-flex">
-    	<div class="one-half img" style="background-image: url(images/about.jpg);"></div>
+    	<div class="one-half img" style="background-image: url(images/about4.jpg);"></div>
     	<div class="one-half ftco-animate">
     		<div class="overlap">
 	        <div class="heading-section ftco-animate ">
-	        	<span class="subheading">Discover</span>
+	        	<!-- <span class="subheading">Discover</span> -->
 	          <h2 class="mb-4">Our Story</h2>
 	        </div>
 	        <div>
-	  				<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-	  			</div>
+				<p>សាកលវិទ្យាល័យភ្នំពេញអន្តរជាតិ (ស.ភ.ព.អ) បានចាប់បដិសន្ធិនាឆ្នាំ២០០២ ជា "សាកលវិទ្យាល័យអាស៊ាន" ក្រោមការផ្តួចផ្តើមរបស់សាកលវិទ្យាធិការ លោកស្រី ទេព កូលាប ដែលជាបញ្ញវន្តខ្មែរមួយរូបប្រកបដោយស្មារតី ឆន្ទៈ និង ឧត្តមគតិខ្ពង់ខ្ពស់ និងមោះមុត សម្រាប់វិស័យឧត្តមសិក្សា​ របស់កុលបុត្រ កុលធីតាកម្ពុជាជំនាន់ក្រោយ។ លោកស្រីសាកលវិទ្យាធិការ បានបូជាទាំងកម្លាំងកាយ ចិត្ត កិត្តិយស និងទ្រព្យធនផ្ទាល់ខ្លួន ដើម្បីកសាង និង ពង្រីកសាកលវិទ្យាល័យ ចាប់តាំងពីមាននិស្សិតត្រឹមតែ ១០៥០នាក់ រហូតដល់ ៧០០០នាក់ និងពីជួលមូលដ្ឋានរូបវន្តរហូតដល់កសាងបានហេដ្ឋារចនាសម័្ពន្ធរូបវន្តដែលប្រកបដោយផាសុកភាព មានបរិដ្ឋានល្អសម្រាប់ការសិក្សារបស់និស្សិត។</p>
+
+	  		</div>
   			</div>
     	</div>
     </section>
@@ -194,7 +196,7 @@
     	</div>
     </section> -->
 
-    <section class="ftco-section">
+    <!-- <section class="ftco-section">
     	<div class="container">
     		<div class="row align-items-center">
     			<div class="col-md-6 pr-md-5">
@@ -231,7 +233,7 @@
     			</div>
     		</div>
     	</div>
-    </section>
+    </section> -->
 
     <!-- <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg1.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
@@ -294,12 +296,12 @@
 			<?php foreach($allProducts as $prodcut) : ?>
 				<div class="col-md-3">
 					<div class="menu-entry">
-							<a target="_blank" href="product-single.php?id=<?php echo $prodcut->id; ?>" class="img" style="background-image: url(<?php echo IMAGEPRODUCTS; ?>/<?php echo $prodcut->image; ?>);"></a>
+							<a target="_blank" href="allnews.php?id=<?php echo $prodcut->id; ?>" class="img" style="background-image: url(<?php echo IMAGEPRODUCTS; ?>/<?php echo $prodcut->image; ?>);"></a>
 							<div class="text text-center pt-4">
 								<h3><a href="#"><?php echo $prodcut->name; ?></a></h3>
 								<p><?php echo $prodcut->description; ?></p>
 								<p class="price"><span>$<?php echo $prodcut->price; ?></span></p>
-								<p><a target="_blank" href="product-single.php?id=<?php echo $prodcut->id; ?>" class="btn btn-primary btn-outline-primary">Show</a></p>
+								<p><a target="_blank" href="allnews.php?id=<?php echo $prodcut->id; ?>" class="btn btn-primary btn-outline-primary">Show</a></p>
 							</div>
 						</div>
 
@@ -347,7 +349,7 @@
 
     
 
-    <section class="ftco-section img" id="ftco-testimony" style="background-image: url(images/bg_girl.jpg);"  data-stellar-background-ratio="0.5">
+    <section class="ftco-section img" id="ftco-testimony" style="background-image: url(images/about3.jpg);"  data-stellar-background-ratio="0.5">
     	<div class="overlay"></div>
 	    <div class="container">
 	      <div class="row justify-content-center mb-5">

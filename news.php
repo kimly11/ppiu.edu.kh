@@ -1,24 +1,24 @@
 <?php require "includes/header.php"; ?>
 <?php require "config/config.php"; ?>
 <?php 
+    $desserts = $conn->query("SELECT * FROM products WHERE type='dessert'");
+    $desserts->execute();
+    $allDesserts = $desserts->fetchAll(PDO::FETCH_OBJ);
 
-	$desserts = $conn->query("SELECT * FROM products WHERE type='dessert'");
-	$desserts->execute();
+    //grapping drinks
+    $drinks = $conn->query("SELECT * FROM products WHERE type='drink'");
+    $drinks->execute();
+    $allDrinks = $drinks->fetchAll(PDO::FETCH_OBJ);
 
-	$allDesserts = $desserts->fetchAll(PDO::FETCH_OBJ);
-
-	//grapping drinks
-	$drinks = $conn->query("SELECT * FROM products WHERE type='drink'");
-	$drinks->execute();
-
-	$allDrinks = $drinks->fetchAll(PDO::FETCH_OBJ);
-
-
+    //grapping announcements - fixed this section
+    $announcements = $conn->query("SELECT * FROM products WHERE type='announ'");
+    $announcements->execute();
+    $allAnnouncements = $announcements->fetchAll(PDO::FETCH_OBJ);
 ?>
 
     <section class="home-slider owl-carousel">
 
-      <div class="slider-item" style="background-image: url(images/bg3.jpg);" data-stellar-background-ratio="0.5">
+      <div class="slider-item" style="background-image: url(images/about5.jpg);" data-stellar-background-ratio="0.5">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center">
@@ -170,7 +170,9 @@
 
 		              <a class="nav-link active" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">News</a>
 
-		              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">News</a>
+		              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Scholarship</a>
+		              <a class="nav-link" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">announcement</a>
+
 		            </div>
 		          </div>
 		          <div class="col-md-12 d-flex align-items-center">
@@ -184,12 +186,12 @@
 							<?php foreach($allDrinks as $drink) : ?>
 		              		<div class="col-md-4 text-center">
 		              			<div class="menu-wrap">
-		              				<a href="products/product-single.php?id=<?php echo $drink->id; ?>" class="menu-img img mb-4" style="background-image: url(<?php echo IMAGEPRODUCTS; ?>/<?php echo $drink->image; ?>);"></a>
+		              				<a href="allnews.php?id=<?php echo $drink->id; ?>" class="menu-img img mb-4" style="background-image: url(<?php echo IMAGEPRODUCTS; ?>/<?php echo $drink->image; ?>);"></a>
 		              				<div class="text">
-		              					<h3><a href="products/product-single.php?id=<?php echo $drink->id; ?>"><?php echo $drink->name; ?></a></h3>
+		              					<h3><a href="allnews.php?id=<?php echo $drink->id; ?>"><?php echo $drink->name; ?></a></h3>
 		              					<p><?php echo $drink->description; ?></p>
 		              					<p class="price"><span><?php echo $drink->price; ?></span></p>
-		              					<p><a href="products/product-single.php?id=<?php echo $drink->id; ?>" class="btn btn-primary btn-outline-primary">show</a></p>
+		              					<p><a href="allnews.php?id=<?php echo $drink->id; ?>" class="btn btn-primary btn-outline-primary">show</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -203,12 +205,12 @@
 							<?php foreach($allDesserts as $dessert) : ?>
 								<div class="col-md-4 text-center">
 									<div class="menu-wrap">
-										<a href="products/product-single.php?id=<?php echo $dessert->id; ?>" class="menu-img img mb-4" style="background-image: url(<?php echo IMAGEPRODUCTS; ?>/<?php echo $dessert->image; ?>);"></a>
+										<a href="allnews.php?id=<?php echo $dessert->id; ?>" class="menu-img img mb-4" style="background-image: url(<?php echo IMAGEPRODUCTS; ?>/<?php echo $dessert->image; ?>);"></a>
 										<div class="text">
-											<h3><a href="products/product-single.php?id=<?php echo $dessert->id; ?>"><?php echo $dessert->name; ?></a></h3>
+											<h3><a href="allnews.php?id=<?php echo $dessert->id; ?>"><?php echo $dessert->name; ?></a></h3>
 											<p><?php echo $dessert->description; ?></p>
 											<p class="price"><span><?php echo $dessert->price; ?></span></p>
-											<p><a href="products/product-single.php?id=<?php echo $dessert->id; ?>" class="btn btn-primary btn-outline-primary">show</a></p>
+											<p><a href="allnews.php?id=<?php echo $dessert->id; ?>" class="btn btn-primary btn-outline-primary">show</a></p>
 										</div>
 									</div>
 								</div>
@@ -216,6 +218,27 @@
 		              		
 		              	</div>
 		              </div>
+
+					  <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
+						<div class="row" >
+							<?php foreach($allAnnouncements as $announcement) : ?>
+								<div class="col-md-4 text-center" style="width: 380px; height: 800px;">
+									<div class="menu-wrap">
+										<a href="allnews.php?id=<?php echo $announcement->id; ?>" class="menu-img img mb-4" style="background-image: url(<?php echo IMAGEPRODUCTS; ?>/<?php echo $announcement->image; ?>);"></a>
+										<div class="text">
+											<h3><a href="allnews.php?id=<?php echo $announcement->id; ?>"><?php echo $announcement->name; ?></a></h3>
+											<p><?php echo $announcement->description; ?></p>
+											<p class="price"><span><?php echo $announcement->price; ?></span></p>
+											<p><a href="allnews.php?id=<?php echo $announcement->id; ?>" class="btn btn-primary btn-outline-primary">show</a></p>
+										</div>
+									</div>
+								</div>
+							<?php endforeach; ?>
+						</div>
+					</div>
+
+						
+
 		            </div>
 		          </div>
 		        </div>
@@ -223,6 +246,13 @@
 		    </div>
     	</div>
     </section>
+	
+
+
+
+
+
+
 
 <?php require "includes/footer.php"; ?>
     

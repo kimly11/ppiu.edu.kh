@@ -6,10 +6,10 @@
         body {
             font-family: 'Khmer OS Content', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #000;
             margin: 0;
             padding: 0;
-            background-color:rgb(0, 110, 255);
+            background-color:rgba(255, 255, 255, 0.9);
         }
         
         .main-container {
@@ -27,7 +27,7 @@
         }
         
         .header h1 {
-            color: #2c3e50;
+            color:rgb(0, 0, 0);
             font-size: 28px;
             margin-bottom: 10px;
         }

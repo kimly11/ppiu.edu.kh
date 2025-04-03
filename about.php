@@ -8,7 +8,7 @@ $allReviews = $reviews->fetchAll(PDO::FETCH_OBJ);
 ?>
 
 <section class="home-slider owl-carousel">
-    <div class="slider-item" style="background-image: url(images/bg_girl.jpg);" data-stellar-background-ratio="0.5">
+    <div class="slider-item" style="background-image: url(images/about3.jpg);" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row slider-text justify-content-center align-items-center">
@@ -22,11 +22,11 @@ $allReviews = $reviews->fetchAll(PDO::FETCH_OBJ);
 </section>
 
 <section class="ftco-about d-md-flex">
-    <div class="one-half img" style="background-image: url(images/about.jpg);"></div>
+    <div class="one-half img" style="background-image: url(images/about3.jpg);"></div>
     <div class="one-half ftco-animate">
         <div class="overlap">
             <div class="heading-section ftco-animate">
-                <span class="subheading">Discover</span>
+                <!-- <span class="subheading">Discover</span> -->
                 <h2 class="mb-4">ប្រវត្តិសាកលវិទ្យាល័យ</h2>
             </div>
             <div>

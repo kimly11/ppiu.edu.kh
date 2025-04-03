@@ -1,145 +1,92 @@
-<?php require "../includes/header.php"; ?>
-<?php require "../config/config.php"; ?>
-<?php 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+      <img class="image-logo" src="images/logo.png" alt="" style="width: 112px; height: 98px;">
+        <a class="navbar-brand" href="<?php echo APPURL; ?>">Phnompenh<small>international university</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a href="<?php echo APPURL; ?>" class="nav-link">Home</a></li>
+            
+            <!-- Admission Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="<?php echo APPURL;?>/About.php" id="navbarDropdownMenuLink" role="button" aria-expanded="false">About</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a href="academicstaff.php" class="dropdown-item">academic staff</a></li>
+                <li><a href="supportstaff.php" class="dropdown-item">support staff</a></li>
+              </ul>
+            </li>
+          
+            <!-- Academic Dropdown -->
+            <li class="nav-item dropdown">
+              <a href="<?php echo APPURL;?>/academic.php" class="nav-link" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Academic</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <!-- DEGREE Dropdown -->
+                <li class="dropdown-submenu">
+                  <a href="#" class="dropdown-item dropdown-toggle">DEGREE</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="test.php" class="dropdown-item">PROFESSIONAL/SHORT COURSE</a></li>
+                    <li><a href="#" class="dropdown-item">ASSOCIATE</a></li>
+                    <li><a href="#" class="dropdown-item">MASTER'S DEGREE</a></li>
+                    <li><a href="bachelor.php" class="dropdown-item">BACHELOR</a></li>
+                    <li><a href="doctoral.php" class="dropdown-item">DOCTORAL</a></li>
+
+                  </ul>
+                </li>
+
+                <!-- FACULTIES Dropdown -->
+                <li class="dropdown-submenu">
+                  <a href="faculties.php" class="dropdown-item dropdown-toggle">FACULTIES</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="technology.php" class="dropdown-item">FACULTY OF SCIENCE AND TECHNOLOGY</a></li>
+                    <li><a href="#" class="dropdown-item">FACULTY OF BUSINESS AND TOURISM</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Alumni -->
+            <li class="nav-item"><a href="<?php echo APPURL;?>/alumni.php" class="nav-link">Alumni</a></li>
+
+            <!-- News Dropdown -->
+            <li class="nav-item dropdown">
+              <a href="<?php echo APPURL;?>/news.php" class="nav-link" id="navbarDropdownMenuLink" role="button" aria-expanded="false">News</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a href="#" class="dropdown-item">EVENTS</a></li>
+                <li><a href="#" class="dropdown-item">SCHOLARSHIPS</a></li>
+                <li><a href="announcement.php" class="dropdown-item">Announcements</a></li>
+                <li><a href="loan.php" class="dropdown-item">Student Loan</a></li>
+              </ul>
+            </li>
+
+            <!-- Library -->
+            <li class="nav-item dropdown">
+              <a href="<?php echo APPURL;?>/services.php" class="nav-link" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Library</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a href="#" class="dropdown-item">PPIU Reading Club</a></li>
+                <li><a href="#" class="dropdown-item">LIBRARY MATERIALS</a></li>
+                <li><a href="#" class="dropdown-item">ABOUT LIBRARY</a></li>
+              </ul>
+            </li>
+
+            <!-- Admission Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="<?php echo APPURL;?>/admission.php" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Admission</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a href="#" class="dropdown-item">ASSOCIATE</a></li>
+                <li><a href="#" class="dropdown-item">MASTER</a></li>
+                <li><a href="#" class="dropdown-item">BACHELOR</a></li>
+                <li><a href="#" class="dropdown-item">DOCTORAL</a></li>
+              </ul>
+            </li>
 
 
-	if(isset($_GET['id'])) {
-		$id = $_GET['id'];
-
-
-		//data for single product
-		$product = $conn->query("SELECT * FROM products WHERE id='$id'");
-		$product->execute();
-
-		$singelProduct = $product->fetch(PDO::FETCH_OBJ);
-		
-
-		//data for relatedProducts
-		$relatedProducts = $conn->query("SELECT * FROM products WHERE type='$singelProduct->type'
-		AND id !='$singelProduct->id'");
-
-		$relatedProducts->execute();
-
-		$allRelatedProducts = $relatedProducts->fetchAll(PDO::FETCH_OBJ);
-
-
-		//add to cart
-		if(isset($_POST['submit'])) {
-
-			$name = $_POST['name'];
-			$image = $_POST['image'];
-			$price = $_POST['price'];
-			$pro_id = $_POST['pro_id'];
-			$description = $_POST['description'];
-			$quantity = $_POST['quantity'];
-			$user_id = $_SESSION['user_id'];
-
-			$insert_cart = $conn->prepare("INSERT INTO cart (name, image, price, pro_id, description,
-			quantity, user_id) VALUES (:name, :image, :price, :pro_id, :description, :quantity, :user_id)");
-
-			$insert_cart->execute([
-				":name" => $name,
-				":image" => $image,
-				":price" => $price,
-				":pro_id" => $pro_id,
-				":description" => $description,
-				":quantity" => $quantity,
-				":user_id" => $user_id
-			]);
-
-			echo "<script>alert('added to cart successfully');</script>";
-		}
-
-
-
-		///validation for the cart
-		if(isset($_SESSION['user_id'])) {
-			$validateCart = $conn->query("SELECT * FROM cart WHERE pro_id='$id' AND
-			user_id='$_SESSION[user_id]'");
-			$validateCart->execute();
-
-			$rowCount = $validateCart->rowCount();
-		}
-		
-	} else {
-		header("location: ".APPURL."/not.php");
-	}
-
-
-?>
-
-    <section class="home-slider owl-carousel">
-
-      <div class="slider-item" style="background-image: url(<?php echo APPURL; ?>/images/bg2.jpeg);" data-stellar-background-ratio="0.5">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text justify-content-center align-items-center">
-
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">Product Detail</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="<?php echo APPURL; ?>">Home</a></span> <span>Product Detail</span></p>
-            </div>
-
-          </div>
+            <!-- Contact -->
+            <li class="nav-item"><a href="<?php echo APPURL;?>/contact.php" class="nav-link">Contact</a></li>
+          </ul>
         </div>
       </div>
-    </section>
-
-    <section class="ftco-section">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-6 mb-5 ftco-animate">
-    				<a href="h-50 images/menu-2.jpg" class="image-popup"><img src="<?php echo IMAGEPRODUCTS; ?>/<?php echo $singelProduct->image; ?>" class="img-fluid" alt="Colorlib Template"></a>
-    			</div> 
-				<input name="name" value="<?php echo $singelProduct->name; ?>" type="hidden">
-				<input name="image" value="<?php echo $singelProduct->image; ?>" type="hidden">
-				<input name="price" value="<?php echo $singelProduct->price; ?>" type="hidden">
-				<input name="pro_id" value="<?php echo $singelProduct->id; ?>" type="hidden">
-				<input name="description" value="<?php echo $singelProduct->description; ?>" type="hidden">
-				<?php if(isset($_SESSION['user_id'])) : ?>
-					<?php if($rowCount > 0) : ?>
-						<button  style="margin-top: -335px; margin-left: 632px; height: 65px;" name="submit" type="submit" class="btn btn-primary py-3 px-5" disabled>Added to Cart</button>
-					<?php else : ?>	
-						<button  style="display: inline-block; position: relative; z-index: 1; padding: 2em; margin: -2em; margin-top: -335px; margin-left: 632px; height: 65px;" name="submit" type="submit" class="btn btn-primary py-3 px-5">Add to Cart</button>
-					<?php endif; ?>	
-				<?php else : ?>	
-					<!-- <p style="margin-top: -335px; margin-left: 632px; height: 65px;">login to add product to cart</p> -->
-				<?php endif; ?>	
-			</form>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-    <section class="ftco-section">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-          	<span class="subheading">Discover</span>
-            <h2 class="mb-4">Related products</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          </div>
-        </div>
-        <div class="row">
-			<?php foreach($allRelatedProducts as $allRelatedProduct) : ?>
-        	<div class="col-md-3">
-        		<div class="menu-entry">
-    					<a href="<?php echo APPURL; ?>/products/product-single.php?id=<?php echo $allRelatedProduct->id; ?>" class="img" style="background-image: url(<?php echo IMAGEPRODUCTS; ?>/<?php echo $allRelatedProduct->image; ?>);"></a>
-    					<div class="text text-center pt-4">
-    						<h3><a href="<?php echo APPURL; ?>/products/product-single.php?id=<?php echo $allRelatedProduct->id; ?>"><?php echo $allRelatedProduct->name; ?></a></h3>
-    						<p>
-							<?php echo $allRelatedProduct->description; ?>
-							</p>
-    						<p class="price"><span>$<?php echo $allRelatedProduct->price; ?></span></p>
-    						<p><a href="<?php echo APPURL; ?>/products/product-single.php?id=<?php echo $allRelatedProduct->id; ?>" class="btn btn-primary btn-outline-primary">show</a></p>
-    					</div>
-    				</div>
-        	</div>
-			<?php endforeach; ?>
-        	
-        </div>
-    	</div>
-    </section>
-
-<?php require "../includes/footer.php"; ?>
-   
+    </nav>
+    <!-- END nav -->

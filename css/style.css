@@ -3223,7 +3223,7 @@ input[type="button"].btn-block {
       border-color: transparent; }
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
-    color: #495057;
+    color: #574a49;
     background-color: #fff;
     border-color: #dee2e6 #dee2e6 #fff; }
   .nav-tabs .dropdown-menu {
@@ -7289,13 +7289,13 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: #151111;
+  background: rgba(0, 0, 0, 0.1);
   font-size: 15px;
   line-height: 1.8;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
-  background-color: #ff15b7;
-  /* background: url(../images/bg_4.jpg) no-repeat fixed; */
+  background-color: rgba(0, 0, 0, 0.25);
+  /* background: url(../images/about3.jpg) no-repeat fixed; */
   background-size: cover; }
   body.menu-show {
     overflow: hidden;
@@ -7319,7 +7319,7 @@ a {
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.4;
-  color: #fff;
+  color: #000;
   font-weight: 400;
   font-family: "Josefin Sans", Arial, sans-serif; }
 
@@ -7327,7 +7327,7 @@ h1, h2, h3, h4, h5,
   color: #c49b63 !important; }
 
 .ftco-navbar-light {
-  background: transparent !important;
+  background: #dc3545 !important;
   position: absolute;
   top: 0;
   left: 0;
@@ -7370,17 +7370,18 @@ h1, h2, h3, h4, h5,
         opacity: 1; }
   .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
     border: none;
-    background: #000;
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 0;
     -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
     -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
     box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41); }
     .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item {
       font-size: 13px;
-      color: rgba(255, 255, 255, 0.5);
-      background: #0d0d0d; }
+      color: #000;
+      background: #fff;
+     }
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:hover, .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:focus {
-        color: #fff; }
+        color: #000; }
   .ftco-navbar-light .navbar-nav > .nav-item.ftco-seperator {
     position: relative;
     margin-left: 20px;
@@ -7446,7 +7447,7 @@ h1, h2, h3, h4, h5,
   .ftco-navbar-light .navbar-nav > .nav-item.cta.cta-colored span {
     border-color: #c49b63; }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: #c49b63; }
+    color: #000; }
     .ftco-navbar-light .navbar-nav > .nav-item.active > a:after {
       opacity: 1;
       background: #c49b63; }
@@ -7466,7 +7467,7 @@ h1, h2, h3, h4, h5,
     left: 0;
     top: 0;
     margin-top: -130px;
-    background: #ff15b7 !important;
+    background: #dc3545 !important;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     border: none; }
@@ -7583,14 +7584,16 @@ h1, h2, h3, h4, h5,
   .owl-carousel:hover .owl-nav .owl-next {
     right: -25px; }
   .owl-carousel.home-slider {
+  
     position: relative;
-    height: 750px;
+    height: 800px;
     z-index: 0; }
     .owl-carousel.home-slider .slider-item {
+      margin-top: 125px;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      height: 750px;
+      height: 800px;
       position: relative;
       z-index: 0; }
       @media (max-width: 1199.98px) {
@@ -7606,7 +7609,7 @@ h1, h2, h3, h4, h5,
         opacity: .3; }
       .owl-carousel.home-slider .slider-item .slider-text {
         color: #fff;
-        height: 750px;
+        height: 800px;
         text-align: right; }
         @media (min-width: 992px) {
           .owl-carousel.home-slider .slider-item .slider-text .order-md-last {
@@ -8526,12 +8529,12 @@ textarea.form-control {
       padding: 6em 0; } }
 
 .ftco-bg-dark {
-  background: #ffe8a1; }
+  background: #dc3545; }
 
 .ftco-footer {
   font-size: 16px;
   padding: 7em 0;
-  background: #ff15b7; 
+  background: #dc3545; 
 }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
@@ -8992,7 +8995,7 @@ textarea.form-control {
   height: 58px !important;
   padding-left: 0;
   padding-right: 0;
-  background: transparent !important;
+  background: #c49b63 !important;
   color: rgba(255, 255, 255, 0.9) !important;
   font-size: 13px;
   border-radius: 0px;

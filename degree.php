@@ -9,10 +9,10 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #000;
             margin: 0;
             padding: 0;
-            background-color: rgb(43, 50, 139);
+            background-color: rgba(0, 0, 0, 0.25);
         }
         
         /* Main content container */

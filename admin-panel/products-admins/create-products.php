@@ -49,7 +49,7 @@
         <div class="col">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title mb-5 d-inline">Create Product</h5>
+              <h5 class="card-title mb-5 d-inline">Create EVENTS</h5>
           <form method="POST" action="create-products.php" enctype="multipart/form-data">
                 <!-- Email input -->
                 <div class="form-outline mb-4 mt-4">
@@ -57,7 +57,7 @@
                  
                 </div>
                 <div class="form-outline mb-4 mt-4">
-                  <input type="text" name="price" id="form2Example1" class="form-control" placeholder="price" />
+                  <input type="text" name="price" id="form2Example1" class="form-control" placeholder="text" />
                  
                 </div>
                 <div class="form-outline mb-4 mt-4">
@@ -73,8 +73,10 @@
 
                   <select name="type" class="form-select  form-control" aria-label="Default select example">
                     <option selected>Choose Type</option>
-                    <option value="drink">drink</option>
-                    <option value="dessert">dessert</option>
+                    <option value="drink">News</option>
+                    <option value="dessert">scholarships</option>
+                    <option value="announ">announcement</option>
+
                   </select>
                 </div>
 

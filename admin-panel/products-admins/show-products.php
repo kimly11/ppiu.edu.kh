@@ -16,8 +16,8 @@
         <div class="col">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title mb-4 d-inline">Products</h5>
-              <a  href="create-products.php" class="btn btn-primary mb-4 text-center float-right">Create Products</a>
+              <h5 class="card-title mb-4 d-inline">New</h5>
+              <a  href="create-products.php" class="btn btn-primary mb-4 text-center float-right">Create EVENTS</a>
 
               <table class="table">
                 <thead>
@@ -25,7 +25,7 @@
                     <th scope="col">#</th>
                     <th scope="col">name</th>
                     <th scope="col">image</th>
-                    <th scope="col">price</th>
+                    <th scope="col">text</th>
                     <th scope="col">type</th>
                     <th scope="col">delete</th>
                   </tr>
