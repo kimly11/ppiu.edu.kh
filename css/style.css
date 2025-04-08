@@ -119,6 +119,39 @@ ul ol {
 .dropdown-submenu {
     position: relative;
 }
+/*  */
+.dropdown-menu a {
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.drop-right {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 2px 2px 8px rgba(138, 255, 164, 0.2);
+  z-index: 1;
+}
+.drop-right li {
+  display: block;
+}
+.drop-right li a {
+  padding: 10px;
+  display: block;
+}
+.drop-right li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.has-dropright:hover .drop-right {
+  display: block;
+}
+/*  */
     
 .dropdown-submenu .dropdown-menu {
         top: 0;
@@ -491,7 +524,7 @@ pre {
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: none; } }
 
 .container-fluid {
   width: 100%;
@@ -9307,3 +9340,4 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+    
