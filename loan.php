@@ -9,7 +9,8 @@
             color: #000;
             margin: 0;
             padding: 0;
-            background-color:rgba(255, 255, 255, 0.9);
+            background-color: #dc3545
+            /* background-color:rgba(249, 67, 35, 0.9); */
         }
         
         .main-container {
