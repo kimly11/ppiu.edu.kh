@@ -2,11 +2,19 @@
     session_start();
     define("APPURL", "http://localhost/ppiu.edu.kh");
     define("IMAGEPRODUCTS", "http://localhost/ppiu.edu.kh/admin-panel/products-admins/images");
+    
+    // Language switching logic
+    if (!isset($_SESSION['lang'])) {
+        $_SESSION['lang'] = 'en'; // Default language
+    }
+    if (isset($_GET['lang'])) {
+        $_SESSION['lang'] = $_GET['lang'];
+    }
+    $current_lang = $_SESSION['lang'];
 ?>
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $current_lang; ?>">
   <head>
     <title>PPIU</title>
     <link rel="icon" href="images/logo.png" type="image/png">
@@ -18,7 +26,6 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
 
     <!-- CSS Links -->
     <link rel="stylesheet" href="<?php echo APPURL; ?>/css/open-iconic-bootstrap.min.css">
@@ -33,26 +40,97 @@
     <link rel="stylesheet" href="<?php echo APPURL; ?>/css/flaticon.css">
     <link rel="stylesheet" href="<?php echo APPURL; ?>/css/icomoon.css">
     <link rel="stylesheet" href="<?php echo APPURL; ?>/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&display=swap" rel="stylesheet">
     
+    <style>
+      body {
+        font-family: 'Noto Sans Khmer', Arial, sans-serif;
+      }
+      
+      /* Language switcher styles */
+      .lang-switcher-container {
+        display: flex;
+        align-items: center;
+      }
+      
+      /* Left position */
+      .lang-switcher-left {
+        margin-right: 2px;
+      }
+      
+      /* Right position (default) */
+      .lang-switcher-right {
+        margin-left: 1px;
+      }
+      
+      .lang-btn {
+        background: #f8b739;
+        color: #000;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-weight: 500;
+      }
+      
+      .lang-btn:hover {
+        background: #e6a532;
+        color: #fff;
+        transform: translateY(-2px);
+      }
+      
+      .lang-btn i {
+        font-size: 16px;
+      }
+      
+      /* Mobile responsive adjustments */
+      @media (max-width: 991px) {
+        .lang-switcher-container {
+          padding: 10px 15px;
+        }
+        .lang-btn {
+          width: 50%;
+          justify-content: center;
+        }
+      }
+    </style>
   </head>
   <body>
        <!-- Navbar -->
        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-      <img class="image-logo" src="images/logo.png" alt="" style="width: 112px; height: 98px;">
-        <a class="navbar-brand" href="<?php echo APPURL; ?>">Phnompenh<small>international university</a>
+        <!-- Language switcher on LEFT side -->
+        <div class="lang-switcher-container lang-switcher-left d-lg-none d-xl-none">
+          <?php if ($current_lang == 'en'): ?>
+            <a href="?lang=kh" class="lang-btn"><i class="fas fa-language"></i>ភាសាខ្មែរ</a>
+          <?php else: ?>
+            <a href="?lang=en" class="lang-btn"><i class="fas fa-language"></i>English</a>
+          <?php endif; ?>
+        </div>
+        
+        <img class="image-logo" src="images/logo.png" alt="" style="width: 112px; height: 98px;">
+        <a class="navbar-brand" href="<?php echo APPURL; ?>">
+            <?php echo ($current_lang == 'kh') ? 'សាកលវិទ្យាល័យ<small>ភ្នំពេញអន្តរជាតិ</small>' : 'Phnompenh<small>international university</small>'; ?>
+        </a>
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span> Menu
+          <span class="oi oi-menu"></span> <?php echo ($current_lang == 'kh') ? 'ម៉ឺនុយ' : 'Menu'; ?>
         </button>
+        
         <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto" style="width: 850px; height: 55px;">
-
-            <li class="nav-item active"><a href="<?php echo APPURL; ?>" class="nav-link">Home</a></li>            
+          <ul class="navbar-nav ml-auto" style="width: 770px; height: 50px;">
+            <li class="nav-item active"><a href="<?php echo APPURL; ?>" class="nav-link"><?php echo ($current_lang == 'kh') ? 'ទំព័រដើម' : 'Home'; ?></a></li>            
             <li class="nav-item dropdown">
-              <a class="nav-link" href="<?php echo APPURL;?>/About.php" id="navbarDropdownMenuLink" role="button" aria-expanded="false">About</a>
+              <a class="nav-link" href="<?php echo APPURL;?>/About.php" id="navbarDropdownMenuLink" role="button" aria-expanded="false"><?php echo ($current_lang == 'kh') ? 'អំពី' : 'About'; ?></a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">              
               <li class="has-dropright">
-                      <a href="supportstaff.php" id="degree"><i class="fas fa-graduation-cap"></i>Support Staff</a>
+                      <a href="supportstaff.php" id="degree"><i class="fas fa-graduation-cap"></i><?php echo ($current_lang == 'kh') ? 'បុគ្គលិកគាំទ្រ' : 'Support Staff'; ?></a>
                       <ul class="drop-right">
                       </ul>
                   </li>
@@ -61,81 +139,73 @@
           
             <!-- Academic Dropdown -->
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false"  >Academics</a>
+              <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false"><?php echo ($current_lang == 'kh') ? 'អក្សរសាស្ត្រ' : 'Academics'; ?></a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li class="has-dropright">
-                  <a href="#" id="degree"><i class="fas fa-graduation-cap"></i> DEGREE</a>
+                  <a href="#" id="degree"><i class="fas fa-graduation-cap"></i> <?php echo ($current_lang == 'kh') ? 'សញ្ញាបត្រ' : 'DEGREE'; ?></a>
                     <ul class="drop-right">
-                        <li><a href="degree.php" id="professional"><i class="fas fa-chalkboard-teacher"></i> PROFESSIONAL/ SHORT COURSE</a></li>                        
-                        <li><a href="associate.php" id="associate"><i class="fas fa-user-graduate"></i> ASSOCIATE</a></li>                          
-                        <li><a href="master_degree.php" id="masters-degree"><i class="fas fa-university"></i> MASTER'S DEGREE</a></li>                         
-                        <li><a href="bachelor.php" id="bachelor"><i class="fas fa-user-graduate"></i> BACHELOR</a></li>                        
-                        <li><a href="doctoral.php" id="doctoral"><i class="fas fa-award"></i> DOCTORAL</a></li>
+                        <li><a href="degree.php" id="professional"><i class="fas fa-chalkboard-teacher"></i> <?php echo ($current_lang == 'kh') ? 'វគ្គខ្លី/វិជ្ជាជីវៈ' : 'PROFESSIONAL/SHORT COURSE'; ?></a></li>                        
+                        <li><a href="associate.php" id="associate"><i class="fas fa-user-graduate"></i> <?php echo ($current_lang == 'kh') ? 'សញ្ញាបត្ររង' : 'ASSOCIATE'; ?></a></li>                          
+                        <li><a href="master_degree.php" id="masters-degree"><i class="fas fa-university"></i> <?php echo ($current_lang == 'kh') ? 'មាស្តរបត្រ' : 'MASTER\'S DEGREE'; ?></a></li>                         
+                        <li><a href="bachelor.php" id="bachelor"><i class="fas fa-user-graduate"></i> <?php echo ($current_lang == 'kh') ? 'បរិញ្ញាបត្រ' : 'BACHELOR'; ?></a></li>                        
+                        <li><a href="doctoral.php" id="doctoral"><i class="fas fa-award"></i> <?php echo ($current_lang == 'kh') ? 'បណ្ឌិត' : 'DOCTORAL'; ?></a></li>
                       </ul>
                   </li>
                   
-                  
                   <li class="has-dropright">
-                      <a href="faculties.php" id="faculties"><i class="fas fa-building"></i> FACULTIES</a>
+                      <a href="#" id="faculties"><i class="fas fa-building"></i> <?php echo ($current_lang == 'kh') ? 'មហាវិទ្យាល័យ' : 'FACULTIES'; ?></a>
                       <ul class="drop-right">
-                          <li><a href="technology.php" id="faculty-science-it"><i class="fas fa-flask"></i> FACULTY OF SCIENCE AND INFORMATION TECHNOLOGY</a></li>
+                          <li><a href="technology.php" id="faculty-science-it"><i class="fas fa-flask"></i> <?php echo ($current_lang == 'kh') ? 'មហាវិទ្យាល័យវិទ្យាសាស្ត្រ និងព័ត៌មានវិទ្យា' : 'FACULTY OF SCIENCE AND INFORMATION TECHNOLOGY'; ?></a></li>
                           
-                          <li><a href="Business.php" id="faculty-business-tourism"><i class="fas fa-briefcase"></i> FACULTY OF BUSINESS AND TOURISM</a></li>
-                     
-                          <!-- <li><a href="law.php" id="faculty-law-economics"><i class="fas fa-balance-scale"></i> FACULTY OF LAW AND ECONOMICS</a></li>
-                        
-                          <li><a href="education.php" id="faculty-education"><i class="fas fa-book"></i> FACULTY OF EDUCATION SCIENCE</a></li>
-                         
-                          <li><a href="#" id="faculty-news-views"><i class="fas fa-newspaper"></i> FACULTY OF NEWS AND VIEWS</a></li> -->
+                          <li><a href="#" id="faculty-business-tourism"><i class="fas fa-briefcase"></i> <?php echo ($current_lang == 'kh') ? 'មហាវិទ្យាល័យពាណិជ្ជកម្ម និងទេសចរណ៍' : 'FACULTY OF BUSINESS AND TOURISM'; ?></a></li>
                       </ul>
                   </li>
               </ul>
             </li>
 
-            <!-- Alumni -->
-            <!-- <li class="nav-item"><a href="<?php echo APPURL;?>/alumni.php" class="nav-link">Alumni</a></li> -->
-
             <!-- News Dropdown -->
             <li class="nav-item dropdown">
-              <a class="nav-link" href="<?php echo APPURL;?>/news.php"  id="navbarDropdownMenuLink" role="button" aria-expanded="false">News</a>
+              <a class="nav-link" href="<?php echo APPURL;?>/news.php" id="navbarDropdownMenuLink" role="button" aria-expanded="false"><?php echo ($current_lang == 'kh') ? 'ព័ត៌មាន' : 'News'; ?></a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li class="has-dropright">
-                  <a href="<?php echo APPURL;?>/event.php"><i class="fas fa-graduation-cap"></i>EVENTS</a>
+                  <a href="<?php echo APPURL;?>/event.php"><i class="fas fa-graduation-cap"></i><?php echo ($current_lang == 'kh') ? 'ព្រឹត្តិការណ៍' : 'EVENTS'; ?></a>
                 </li>
-                <!-- <li><a href="news.php#v-pills-2" class="dropdown-item">EVENTS</a></li>
-                <li><a href="news.php#v-pills-3" class="dropdown-item">SCHOLARSHIPS</a></li>
-                <li><a href="news.php#v-pills-4" class="dropdown-item">Announcements</a></li>
-                -->
               </ul>
             </li>
 
             <!-- Library -->
             <li class="nav-item dropdown">
-              <a class="nav-link" href="library.php"  id="navbarDropdownMenuLink" role="button" aria-expanded="false">Library</a>
+              <a class="nav-link" href="library.php" id="navbarDropdownMenuLink" role="button" aria-expanded="false"><?php echo ($current_lang == 'kh') ? 'បណ្ណាល័យ' : 'Library'; ?></a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li class="has-dropright">
-                  <a href="reading.php"><i class=""></i> PPIU Reading Club</a>
-                  <!-- <a href="#"><i class=""></i> LIBRARY MATERIALS</a> -->
-                  <a href="library.php"><i class=""></i> ABOUT LIBRARY</a>
+                  <a href="reading.php"><i class=""></i> <?php echo ($current_lang == 'kh') ? 'ក្លឹបអានសៀវភៅ PPIU' : 'PPIU Reading Club'; ?></a>
+                  <a href="library.php"><i class=""></i> <?php echo ($current_lang == 'kh') ? 'អំពីបណ្ណាល័យ' : 'ABOUT LIBRARY'; ?></a>
                 </li>
               </ul>
             </li>
 
             <!-- Admission Dropdown -->
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false">Admission</a>
+              <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false"><?php echo ($current_lang == 'kh') ? 'ការចូលរៀន' : 'Admission'; ?></a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                
                 <li class="has-dropright">
-                  <a href="loan.php"><i class="drop-down"></i> Student Laon</a>
+                  <a href="loan.php"><i class="drop-down"></i> <?php echo ($current_lang == 'kh') ? 'ឥណទានសិស្ស' : 'Student Loan'; ?></a>
                 </li>
               </ul>
             </li>
 
-
             <!-- Contact -->
-            <li class="nav-item"><a href="<?php echo APPURL;?>/contact.php" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="<?php echo APPURL;?>/contact.php" class="nav-link"><?php echo ($current_lang == 'kh') ? 'ទំនាក់ទំនង' : 'Contact'; ?></a></li>
           </ul>
+          
+          <!-- Language switcher on RIGHT side (visible on desktop) -->
+          <div class="lang-switcher-container lang-switcher-right d-none d-lg-block">
+            <?php if ($current_lang == 'en'): ?>
+              <a href="?lang=kh" class="lang-btn" style="width: 116px;"><i class="fas fa-language"></i>ភាសាខ្មែរ</a>
+            <?php else: ?>
+              <a href="?lang=en" class="lang-btn" style="width: 116px;"><i class="fas fa-language"></i>English</a>
+            <?php endif; ?>
+          </div>
         </div>
       </div>
     </nav>
@@ -197,10 +267,14 @@
                             </div>
                         </div>
                         <div class="gdlr-core-pbf-element" >
-                            <div class="gdlr-core-personnel-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-personnel-item-style-grid gdlr-core-personnel-style-grid"  ><div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-column-first gdlr-core-item-pdlr" ><div class="gdlr-core-personnel-list clearfix" ><div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" ><img  src="https://cam-ed.edu.kh/wp-content/uploads/2020/10/Casey-1-800x514.jpg" width="1240" height="797"  srcset="https://cam-ed.edu.kh/wp-content/uploads/2020/10/Casey-1-400x257.jpg 400w, https://cam-ed.edu.kh/wp-content/uploads/2020/10/Casey-1-600x385.jpg 600w, https://cam-ed.edu.kh/wp-content/uploads/2020/10/Casey-1-800x514.jpg 800w, https://cam-ed.edu.kh/wp-content/uploads/2020/10/Casey-1.jpg 1240w"  sizes="(max-width: 767px) 100vw, (max-width: 1150px) 25vw, 287px"  alt="" />
+                            <div class="gdlr-core-personnel-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-personnel-item-style-grid gdlr-core-personnel-style-grid"  >
+                                <div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-column-first gdlr-core-item-pdlr" >
+                                    <div class="gdlr-core-personnel-list clearfix" >
+                                        <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
+                                            <img  src="images/presi.jpg" width="1240" height="797"   sizes="(max-width: 767px) 100vw, (max-width: 1150px) 25vw, 287px"  alt="" />
                         </div>
                         <div class="gdlr-core-personnel-list-content-wrap"  >
-                            <h3 class="gdlr-core-personnel-list-title"  >Casey Barnett</h3>
+                            <h3 class="gdlr-core-personnel-list-title"  >HIM SAM ATH</h3>
                             <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >President</div>
                             <div class="gdlr-core-personnel-list-content" >
                                 <p><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=president@cam-ed.com " target="_blank">
@@ -231,9 +305,9 @@
                 <div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-column-first gdlr-core-item-pdlr" >
                     <div class="gdlr-core-personnel-list clearfix" >
                         <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-                            <img src="https://cam-ed.edu.kh/wp-content/uploads/2020/11/31.png" alt="" width="478" height="325" title="31" />
+                            <img src="images/senir.jpg" alt="" width="478" height="325" title="31" />
                         </div><div class="gdlr-core-personnel-list-content-wrap"  >
-                            <h3 class="gdlr-core-personnel-list-title"  >Sam Sokuntheary</h3>
+                            <h3 class="gdlr-core-personnel-list-title"  >Hong Phearin</h3>
                             <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Senior Vice President</div>
                             <div class="gdlr-core-personnel-list-content" >
                                 <p><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=management@cam-ed.com " target="_blank">
@@ -262,7 +336,7 @@
                             <div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-column-first gdlr-core-item-pdlr" >
                                 <div class="gdlr-core-personnel-list clearfix" >
                                     <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-                                        <img src="https://cam-ed.edu.kh/wp-content/uploads/2020/11/Oeung-Phengly.jpg" alt="" width="478" height="325" title="Oeung Phengly" />
+                                        <img src="images/senir1.jpg" alt="" width="478" height="325" title="Oeung Phengly" />
                                     </div>
                                     <div class="gdlr-core-personnel-list-content-wrap"  >
                                         <h3 class="gdlr-core-personnel-list-title"  >Oeung Phengly</h3>
@@ -280,10 +354,10 @@
                                 <div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-item-pdlr" >
                                     <div class="gdlr-core-personnel-list clearfix" >
                                         <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-                                            <img src="https://cam-ed.edu.kh/wp-content/uploads/2020/11/Mell_Radipaul.jpg" alt="" width="478" height="325" title="Mell_Radipaul" />
+                                            <img src="images/senir2.jpg" alt="" width="478" height="325" title="Mell_Radipaul" />
                                         </div>
                                         <div class="gdlr-core-personnel-list-content-wrap"  >
-                                            <h3 class="gdlr-core-personnel-list-title"  >Mell Radipaul</h3>
+                                            <h3 class="gdlr-core-personnel-list-title"  >TAN SEREYVUTH</h3>
                                             <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >IT Assistant Manager</div>
                                             <div class="gdlr-core-personnel-list-content" >
                                                 <p>
@@ -296,10 +370,10 @@
                                 <div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-item-pdlr" >
                                     <div class="gdlr-core-personnel-list clearfix" >
                                         <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-                                            <img src="https://cam-ed.edu.kh/wp-content/uploads/2020/11/Bunchom_Ratanak.jpg" alt="" width="478" height="325" title="Bunchom_Ratanak" />
+                                            <img src="images/senir3.jpg" alt="" width="478" height="325" title="Bunchom_Ratanak" />
                                         </div>
                                         <div class="gdlr-core-personnel-list-content-wrap"  >
-                                            <h3 class="gdlr-core-personnel-list-title"  >Bunchhom Ratanak</h3>
+                                            <h3 class="gdlr-core-personnel-list-title"  >CHEAM SITHY</h3>
                                             <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Registrar Assistant Manager</div>
                                             <div class="gdlr-core-personnel-list-content" >
                                                 <p><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=bratanak@cam-ed.com " target="_blank"><span class="__cf_email__" data-cfemail="d9bbabb8adb8b7b8b299bab8b4f4bcbdf7bab6b4">[email&#160;protected]</span></a><br />ext:302
@@ -311,10 +385,10 @@
                             <div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-item-pdlr" >
                                 <div class="gdlr-core-personnel-list clearfix" >
                                     <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-                                        <img src="https://cam-ed.edu.kh/wp-content/uploads/2020/11/Sorn-Borin.jpg" alt="" width="478" height="325" title="Sorn Borin" />
+                                        <img src="images/senir4.jpg" alt="" width="478" height="325" title="Sorn Borin" />
                                     </div>
                                     <div class="gdlr-core-personnel-list-content-wrap"  >
-                                        <h3 class="gdlr-core-personnel-list-title"  >Sorn Borin</h3>
+                                        <h3 class="gdlr-core-personnel-list-title"  >HOEM TOLA</h3>
                                         <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Programmer Supervisor</div>
                                         <div class="gdlr-core-personnel-list-content" >
                                             <p>
@@ -326,7 +400,7 @@
                                 <div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-column-first gdlr-core-item-pdlr" >
                                     <div class="gdlr-core-personnel-list clearfix" >
                                         <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-                                            <img src="https://cam-ed.edu.kh/wp-content/uploads/2020/11/Nov_Solin_v2.jpg" alt="" width="478" height="325" title="Nov_Solin_v2" />
+                                            <img src="images/senir5.jpg" alt="" width="478" height="325" title="Nov_Solin_v2" />
                                         </div>
                                         <div class="gdlr-core-personnel-list-content-wrap"  >
                                             <h3 class="gdlr-core-personnel-list-title"  >Nov Solin</h3>
@@ -342,7 +416,7 @@
                                 <div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-item-pdlr" >
                                     <div class="gdlr-core-personnel-list clearfix" >
                                         <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-                                            <img src="https://cam-ed.edu.kh/wp-content/uploads/2020/11/pheara.png" alt="" width="478" height="325" title="pheara" />
+                                            <img src="images/senir6.jpg" alt="" width="478" height="325" title="pheara" />
                                     </div>
                                     <div class="gdlr-core-personnel-list-content-wrap"  >
                                         <h3 class="gdlr-core-personnel-list-title"  >Phon Pheara</h3>
@@ -355,76 +429,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-item-pdlr" >
-                        <div class="gdlr-core-personnel-list clearfix" >
-        <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-            <img src="https://cam-ed.edu.kh/wp-content/uploads/2020/11/Phally_Visal.jpg" alt="" width="478" height="325" title="Phally_Visal" />
-        </div><div class="gdlr-core-personnel-list-content-wrap"  ><h3 class="gdlr-core-personnel-list-title"  >Phally Visal</h3>
-        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Senior Registrar Officer</div>
-        <div class="gdlr-core-personnel-list-content" >
-            <p>
-                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pvisal@cam-ed.com " target="_blank"><span class="__cf_email__" data-cfemail="5d2d2b342e3c311d3e3c30703839733e3230">[email&#160;protected]</span></a><br />ext:302</p>
-    </div>
-</div>
-</div>
-</div>
-<div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-item-pdlr" >
-    <div class="gdlr-core-personnel-list clearfix" >
-        <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-            <img  src="https://cam-ed.edu.kh/wp-content/uploads/2023/01/Chou-Chantha-scaled-800x533.jpg" width="2560" height="1707"  srcset="https://cam-ed.edu.kh/wp-content/uploads/2023/01/Chou-Chantha-scaled-400x266.jpg 400w, https://cam-ed.edu.kh/wp-content/uploads/2023/01/Chou-Chantha-scaled-600x400.jpg 600w, https://cam-ed.edu.kh/wp-content/uploads/2023/01/Chou-Chantha-scaled-800x533.jpg 800w, https://cam-ed.edu.kh/wp-content/uploads/2023/01/Chou-Chantha-scaled.jpg 2560w"  sizes="(max-width: 767px) 100vw, (max-width: 1150px) 25vw, 287px"  alt="" />
-        </div>
-        <div class="gdlr-core-personnel-list-content-wrap"  >
-            <h3 class="gdlr-core-personnel-list-title"  >Chou Chantha</h3>
-            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Senior IT Programmer</div>
-            <div class="gdlr-core-personnel-list-content" ><p><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=cchantha@cam-ed.com " target="_blank"><span class="__cf_email__" data-cfemail="e685858e8788928e87a685878bcb8382c885898b">[email&#160;protected]</span></a><br />ext:301</p>
-        </div>
-    </div>
-</div>
-</div>
-    <div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-column-first gdlr-core-item-pdlr" >
-        <div class="gdlr-core-personnel-list clearfix" ><div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-            <img  src="https://cam-ed.edu.kh/wp-content/uploads/2023/02/Sousday-Sereyrot-scaled-800x533.jpg" width="2560" height="1707"  srcset="https://cam-ed.edu.kh/wp-content/uploads/2023/02/Sousday-Sereyrot-scaled-400x266.jpg 400w, https://cam-ed.edu.kh/wp-content/uploads/2023/02/Sousday-Sereyrot-scaled-600x400.jpg 600w, https://cam-ed.edu.kh/wp-content/uploads/2023/02/Sousday-Sereyrot-scaled-800x533.jpg 800w, https://cam-ed.edu.kh/wp-content/uploads/2023/02/Sousday-Sereyrot-scaled.jpg 2560w"  sizes="(max-width: 767px) 100vw, (max-width: 1150px) 25vw, 287px"  alt="" />
-        </div>
-        <div class="gdlr-core-personnel-list-content-wrap"  >
-            <h3 class="gdlr-core-personnel-list-title"  >Sousday Seyreyrot</h3>
-            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Senior IT Registrar Officer</div>
-            <div class="gdlr-core-personnel-list-content" >
-                <p>
-                    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sseyreyrot@cam-ed.com" target="_blank"><span class="__cf_email__" data-cfemail="a6d5d5c3dfd4c3dfd4c9d2e6c5c7cb8bc3c288c5c9cb">[email&#160;protected]</span></a><br />ext:303</p>
-    </div>
-</div>
-</div>
-</div>
-<div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-item-pdlr" >
-    <div class="gdlr-core-personnel-list clearfix" >
-        <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-            <img  src="https://cam-ed.edu.kh/wp-content/uploads/2023/02/IM-Kenkethya-scaled-800x533.jpg" width="2560" height="1707"  srcset="https://cam-ed.edu.kh/wp-content/uploads/2023/02/IM-Kenkethya-scaled-400x266.jpg 400w, https://cam-ed.edu.kh/wp-content/uploads/2023/02/IM-Kenkethya-scaled-600x400.jpg 600w, https://cam-ed.edu.kh/wp-content/uploads/2023/02/IM-Kenkethya-scaled-800x533.jpg 800w, https://cam-ed.edu.kh/wp-content/uploads/2023/02/IM-Kenkethya-scaled.jpg 2560w"  sizes="(max-width: 767px) 100vw, (max-width: 1150px) 25vw, 287px"  alt="" />
-        </div>
-        <div class="gdlr-core-personnel-list-content-wrap"  >
-            <h3 class="gdlr-core-personnel-list-title"  >Im Kenkethya</h3>
-            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Senior IT Registrar Officer</div>
-            <div class="gdlr-core-personnel-list-content" >
-                <p>
-                    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Ikenkethya@cam-ed.com" target="_blank"><span class="__cf_email__" data-cfemail="7a33111f14111f0e12031b3a191b17571f1e54191517">[email&#160;protected]</span></a><br />ext:303</p>
-    </div>
-</div>
-</div>
-</div>
-<div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-item-pdlr" >
-    <div class="gdlr-core-personnel-list clearfix" >
-        <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
-            <img src="https://cam-ed.edu.kh/wp-content/uploads/2024/09/lyminh-.png" alt="" width="478" height="325" title="lyminh" />
-        </div>
-        <div class="gdlr-core-personnel-list-content-wrap"  >
-            <h3 class="gdlr-core-personnel-list-title"  >Lim Lyminh</h3>
-            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >IT Assistant and Entrance Exam Officer</div>
-            <div class="gdlr-core-personnel-list-content" ><p><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=Ikenkethya@cam-ed.com" target="_blank"><span class="__cf_email__" data-cfemail="a9c5c5d0c4c0c7c1e9cac8c484cccd87cac6c4">[email&#160;protected]</span></a><br />ext:303</p>
-        </div>
-</div>
-</div>
-</div>
-</div>
-</div>
+                    </div>
+                </div>
+            </div>
 <style>
     .kingster-body a {
     color: #fff;
