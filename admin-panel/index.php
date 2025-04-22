@@ -15,17 +15,17 @@
 
 
     //orders
-  $orders = $conn->query("SELECT COUNT(*) AS count_orders FROM orders");
-  $orders->execute();
+  // $orders = $conn->query("SELECT COUNT(*) AS count_orders FROM orders");
+  // $orders->execute();
   
-  $ordersCount = $orders->fetch(PDO::FETCH_OBJ);
+  // $ordersCount = $orders->fetch(PDO::FETCH_OBJ);
 
 
       //bookings
-  $bookings = $conn->query("SELECT COUNT(*) AS count_bookings FROM bookings");
-  $bookings->execute();
+  // $bookings = $conn->query("SELECT COUNT(*) AS count_bookings FROM bookings");
+  // $bookings->execute();
 
-  $bookingsCount = $bookings->fetch(PDO::FETCH_OBJ);
+  // $bookingsCount = $bookings->fetch(PDO::FETCH_OBJ);
 
 
     //admins
@@ -48,7 +48,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <!-- <div class="col-md-3">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Orders</h5>
@@ -57,8 +57,8 @@
               
             </div>
           </div>
-        </div>
-        <div class="col-md-3">
+        </div> -->
+        <!-- <div class="col-md-3">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Bookings</h5>
@@ -67,7 +67,7 @@
               
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="col-md-3">
           <div class="card">
             <div class="card-body">
