@@ -271,15 +271,28 @@
                                 <div class="gdlr-core-personnel-list-column  gdlr-core-column-15 gdlr-core-column-first gdlr-core-item-pdlr" >
                                     <div class="gdlr-core-personnel-list clearfix" >
                                         <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
+                                            <img  src="images/president.jpg" width="1240" height="797"   sizes="(max-width: 767px) 100vw, (max-width: 1150px) 25vw, 287px"  alt="" />
+                        </div>
+                        <div class="gdlr-core-personnel-list-content-wrap"  >
+                            <h3 class="gdlr-core-personnel-list-title"  >Tep Kolap</h3>
+                            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Project Manager</div>
+                            <div class="gdlr-core-personnel-list-content" >
+                                <p><a target="_blank">
+                                    <span >tep.kolap@ppiu.edu.kh </span>
+                                </a><br /></p>
+                            </div>
+                        </div>
+                        <div class="gdlr-core-personnel-list clearfix" >
+                                        <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover" >
                                             <img  src="images/presi.jpg" width="1240" height="797"   sizes="(max-width: 767px) 100vw, (max-width: 1150px) 25vw, 287px"  alt="" />
                         </div>
                         <div class="gdlr-core-personnel-list-content-wrap"  >
                             <h3 class="gdlr-core-personnel-list-title"  >HIM SAM ATH</h3>
-                            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >President</div>
+                            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Member</div>
                             <div class="gdlr-core-personnel-list-content" >
-                                <p><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=president@cam-ed.com " target="_blank">
-                                    <span class="__cf_email__" data-cfemail="cebebcabbda7aaaba0ba8eadafa3e3abaae0ada1a3">[email&#160;protected]</span>
-                                </a><br />ext:110</p>
+                                <p><a target="_blank">
+                                    <span >hin.samath@ppiu.edu.kh</span>
+                                </a><br /></p>
                             </div>
                         </div>
                     </div>
@@ -308,10 +321,10 @@
                             <img src="images/senir.jpg" alt="" width="478" height="325" title="31" />
                         </div><div class="gdlr-core-personnel-list-content-wrap"  >
                             <h3 class="gdlr-core-personnel-list-title"  >Hong Phearin</h3>
-                            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Senior Vice President</div>
+                            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Member</div>
                             <div class="gdlr-core-personnel-list-content" >
-                                <p><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=management@cam-ed.com " target="_blank">
-                                    <span class="__cf_email__" data-cfemail="462b27282721232b2328320625272b6b23226825292b">[email&#160;protected]</span></a><br />ext:109</p>
+                                <p><a  target="_blank">
+                                    <span>hong.phearin@ppiu.edu.kh</span></a><br /></p>
                             </div>
                         </div>
                     </div>
@@ -321,7 +334,7 @@
             <div class="gdlr-core-pbf-element" >
                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr"  >
                     <div class="gdlr-core-title-item-title-wrap clearfix" >
-                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 26px ;"  >IT Department</h3>
+                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 26px ;"  >Member</h3>
                     </div>
                 </div>
             </div>
@@ -339,13 +352,13 @@
                                         <img src="images/senir1.jpg" alt="" width="478" height="325" title="Oeung Phengly" />
                                     </div>
                                     <div class="gdlr-core-personnel-list-content-wrap"  >
-                                        <h3 class="gdlr-core-personnel-list-title"  >Oeung Phengly</h3>
-                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Senior IT Manager</div>
+                                        <h3 class="gdlr-core-personnel-list-title"  >Saram Veasna</h3>
+                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Member</div>
                                         <div class="gdlr-core-personnel-list-content" >
                                             <p>
-                                                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ephengly@cam-ed.com " target="_blank">
-                                                    <span class="__cf_email__" data-cfemail="5a3f2a323f343d36231a393b37773f3e74393537">[email&#160;protected]</span>
-                                                </a><br />ext:301
+                                                <a target="_blank">
+                                                    <span>saram.veasna@ppiu.edu.kh</span>
+                                                </a><br />
                                             </p>
                                         </div>
                                     </div>
@@ -358,10 +371,10 @@
                                         </div>
                                         <div class="gdlr-core-personnel-list-content-wrap"  >
                                             <h3 class="gdlr-core-personnel-list-title"  >TAN SEREYVUTH</h3>
-                                            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >IT Assistant Manager</div>
+                                            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Member</div>
                                             <div class="gdlr-core-personnel-list-content" >
                                                 <p>
-                                                    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mradipaul@cam-ed.com " target="_blank"><span class="__cf_email__" data-cfemail="84e9f6e5e0edf4e5f1e8c4e7e5e9a9e1e0aae7ebe9">[email&#160;protected]</span></a><br />ext:301
+                                                    <a target="_blank"><span >tan.sereyvuth@ppiu.edu.kkh</span></a><br />
                                                 </p>
                                             </div>
                                         </div>
@@ -374,9 +387,9 @@
                                         </div>
                                         <div class="gdlr-core-personnel-list-content-wrap"  >
                                             <h3 class="gdlr-core-personnel-list-title"  >CHEAM SITHY</h3>
-                                            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Registrar Assistant Manager</div>
+                                            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Member</div>
                                             <div class="gdlr-core-personnel-list-content" >
-                                                <p><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=bratanak@cam-ed.com " target="_blank"><span class="__cf_email__" data-cfemail="d9bbabb8adb8b7b8b299bab8b4f4bcbdf7bab6b4">[email&#160;protected]</span></a><br />ext:302
+                                                <p><a target="_blank"><span ></span></a><br />
                                             </p>
                                         </div>
                                     </div>
@@ -389,10 +402,10 @@
                                     </div>
                                     <div class="gdlr-core-personnel-list-content-wrap"  >
                                         <h3 class="gdlr-core-personnel-list-title"  >HOEM TOLA</h3>
-                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Programmer Supervisor</div>
+                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Member</div>
                                         <div class="gdlr-core-personnel-list-content" >
                                             <p>
-                                                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sborin@cam-ed.com " target="_blank"><span class="__cf_email__" data-cfemail="2c5f4e435e45426c4f4d41014948024f4341">[email&#160;protected]</span></a><br />ext:301</p>
+                                                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sborin@cam-ed.com " target="_blank"><span>heom.tola@ppiu.edu.kh</span></a><br /></p>
                                             </div>
                                         </div>
                                     </div>
@@ -403,11 +416,11 @@
                                             <img src="images/senir5.jpg" alt="" width="478" height="325" title="Nov_Solin_v2" />
                                         </div>
                                         <div class="gdlr-core-personnel-list-content-wrap"  >
-                                            <h3 class="gdlr-core-personnel-list-title"  >Nov Solin</h3>
-                                            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >IT Technician Supervisor</div>
+                                            <h3 class="gdlr-core-personnel-list-title"  >Chhin Kona</h3>
+                                            <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Member</div>
                                             <div class="gdlr-core-personnel-list-content" >
                                                 <p>
-                                                    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=nsolin@cam-ed.com " target="_blank"><span class="__cf_email__" data-cfemail="c2acb1adaeabac82a1a3afefa7a6eca1adaf">[email&#160;protected]</span></a><br />ext:301
+                                                    <a  target="_blank"><span >chhin.kona@ppiu.edu.kh</span></a><br />
                                                 </p>
                                             </div>
                                         </div>
@@ -419,11 +432,11 @@
                                             <img src="images/senir6.jpg" alt="" width="478" height="325" title="pheara" />
                                     </div>
                                     <div class="gdlr-core-personnel-list-content-wrap"  >
-                                        <h3 class="gdlr-core-personnel-list-title"  >Phon Pheara</h3>
-                                    <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  > Programmer Assistant Supervisor </div>
+                                        <h3 class="gdlr-core-personnel-list-title"  >Kong Kunthea</h3>
+                                    <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-style: normal ;"  >Member </div>
                                     <div class="gdlr-core-personnel-list-content" >
                                         <p>
-                                            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ppheara@cam-ed.com " target="_blank"><span class="__cf_email__" data-cfemail="a3d3d3cbc6c2d1c2e3c0c2ce8ec6c78dc0ccce">[email&#160;protected]</span></a><br />ext:301
+                                            <a  target="_blank"><span >kong.kunthea@ppiu.edu.kh</span></a><br />
                                         </p>
                                     </div>
                                 </div>
